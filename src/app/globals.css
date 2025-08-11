@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand-primary: 16 44 87; /* deep navy */
+  --color-brand-secondary: 19 95 141; /* ocean blue */
+  --color-brand-accent: 228 207 152; /* champagne */
+  --color-brand-muted: 203 213 225; /* slate-200 */
+
+  --color-surface: 255 255 255;
+  --color-surface-elevated: 245 247 250;
+
+  --color-text: 15 23 42; /* slate-900 */
+  --color-text-muted: 71 85 105; /* slate-500 */
+  --color-text-on-brand: 255 255 255;
+}
+
+html, body, #__next { height: 100%; }
+
+/* Smooth typography */
+@layer base {
+  h1 { @apply font-display text-4xl md:text-6xl tracking-tight; }
+  h2 { @apply font-display text-3xl md:text-4xl tracking-tight; }
+  h3 { @apply font-display text-2xl md:text-3xl tracking-tight; }
+  p { @apply font-body text-base md:text-lg text-text-muted; }
+}
+
+.container-px { @apply px-4 sm:px-6 lg:px-8; }
+
+/* Figma-synced tokens will override defaults when present */
+@import './figma-tokens.css';
+
+
